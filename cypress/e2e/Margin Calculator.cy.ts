@@ -1,0 +1,26 @@
+describe('Margin Calculator', function () {
+    beforeEach(function () {
+        cy.visit('https://tec.gacela.io/margin_calculator');
+    });
+
+    //Nombre: 'Description con espacio en blanco en Margin Calculator'
+    //Codigo: CP-21, CP-39
+    it('Description con espacio en blanco en Margin Calculator', function () {
+        cy.get('#email').type('qatec2022@gmail.com');
+        cy.get('#password').type('qatecjnsc2022');
+        cy.get('.btn > .m-0').click();
+        cy.get('.list-group > [href="#projectsMenu"]').click();
+        cy.get('.list-group > #projectsMenu > [href="/margin_calculator"]').click();
+        cy.get('.text-right > :nth-child(1)').click();
+        cy.get('#name').type(' ');
+        cy.get('.pmo-content').click().then(
+            function(){
+               cy.get('.invalid-feedback').should('contain.text', "This field is required");
+            }
+        );
+    }); 
+
+    afterEach(function () {
+        cy.reload();
+    });
+});
