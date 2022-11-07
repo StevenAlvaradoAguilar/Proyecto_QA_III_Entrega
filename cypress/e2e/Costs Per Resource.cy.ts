@@ -5,14 +5,14 @@ describe('Costs Per Resource', function () {
 
     //Nombre de la prueba: Date con espacio en blanco en Costs Per Resource
     //Codigo: CP-23, CP-51
-    //Falla, porque el boton no esta desabilitado
+    //Falla, porque el boton no esta habilitado
     it('Date con espacio en blanco en Costs Per Resource', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/cost_per_user"]').click();
-        cy.get('.vs__search').type("SOTO")
+        cy.get('.vs__search').type("admin")
         cy.wait(2000)
         cy.get('.vs__search').type('io{enter}')
         cy.get('.btn').click()
@@ -22,14 +22,14 @@ describe('Costs Per Resource', function () {
 
     //Nombre de la prueba: Cost con espacio en blanco en Costs Per Resource
     //Codigo: CP-24, CP-52
-    //Falla, porque el boton no esta desabilitado
+    //Falla, porque el boton no esta habilitado
     it('Cost con espacio en blanco en Costs Per Resource', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/cost_per_user"]').click();
-        cy.get('.vs__search').type("SOTO")
+        cy.get('.vs__search').type("admin")
         cy.wait(2000)
         cy.get('.vs__search').type('io{enter}')
         cy.get('.btn').click().then(

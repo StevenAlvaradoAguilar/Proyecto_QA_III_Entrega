@@ -20,6 +20,6 @@ describe('Project Roles', function () {
     });
 
     afterEach(function () {
-        cy.reload();
+        cy.reload();    
     });
 });
