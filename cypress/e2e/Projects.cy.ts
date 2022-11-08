@@ -11,7 +11,7 @@ describe('Projects', function () {
         cy.get('.btn > .m-0').click();
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/projects"]').click();
-        cy.get('.col-md-2 > :nth-child(1)').click();
+        cy.get('.col-md-2 > nth-child(1)').click();
          cy.get('.pmo-content').click().then(
              function(){
                 cy.get(':nth-child(1) > :nth-child(1) > span > .invalid-feedback').should('contain.text', "This field is required");
@@ -27,10 +27,10 @@ describe('Projects', function () {
         cy.get('.btn > .m-0').click();
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/projects"]').click();
-        cy.get('.col-md-2 > :nth-child(1)').click();
+        cy.get('.col-md-2 > nth-child(1)').click();
         cy.get('span > #name').type('lis');
         cy.get('#client_id').type(' ');
-        cy.get('.card-body > :nth-child(2)').click().then(
+        cy.get('.card-body > nth-child(2)').click().then(
              function(){
                 cy.get('.card-body > :nth-child(1) > :nth-child(2) > span > .invalid-feedback').should('contain.text', "This field is required");
              }
