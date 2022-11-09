@@ -22,7 +22,7 @@ describe('Business Units', function () {
     
     // Nombre: 'Description con con un nombre para buscar en Business Units'
     // Codigo: CP-22, CP-40
-    it('Description con con un nombre para buscar en Business Units', function () {
+    it('Description con un nombre para buscar en Business Units', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
