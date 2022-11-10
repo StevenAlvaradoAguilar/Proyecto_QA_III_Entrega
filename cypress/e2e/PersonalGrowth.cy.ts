@@ -24,7 +24,6 @@ describe('Learning Paths', function () {
     cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
   });
 
-
    //Nombre de la prueba: Learning Path con espacio en blanco en VERSION y con NAME completo Boton Save desabilitado
    //Codigo: CP-47
   it('Learning Path con espacio en blanco en VERSION y con NAME completo Boton Save desabilitado', function () {
@@ -64,11 +63,11 @@ describe('Learning Paths', function () {
       cy.get('.card-body > :nth-child(1)  #name').type('QA');
       cy.get('#version').type('1.0.0');
       
-      cy.get('.btn.btn-company-primary.btn-block').click().then(
-        function(){
-            cy.get('.col-sm-12.col-md-6 > #name').type('QA');
-        }
-    );
+      cy.get('.btn.btn-company-primary.btn-block').click()
+
+      cy.get('.card-body > :nth-child(1)  #name').type('Prueba');
+      cy.get('#version').type('1.0.0');
+        
   });
 
 
@@ -88,11 +87,11 @@ describe('Learning Paths', function () {
     cy.get('#version').type('1.0.1');
     
     
-    cy.get('.btn.btn-company-primary.btn-block').click().then(
-        function(){
-            cy.get('.col-sm-12.col-md-6 > #name').type('QA');
-        }
-    );
+    cy.get('.btn.btn-company-primary.btn-block').click()
+
+    cy.get('.card-body > :nth-child(1)  #name').type('Prueba');
+      cy.get('#version').type('1.0.0');
+     
 
     
 
