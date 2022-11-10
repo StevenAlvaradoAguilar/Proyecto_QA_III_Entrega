@@ -3,9 +3,9 @@ describe('Learning Paths', function () {
         cy.visit('https://tec.gacela.io/learning_paths');
     });
 
-    //Nombre de la prueba: Learning Path con espacio en blanco en NAME
+    //Nombre de la prueba: Learning Path con espacio en blanco en NAME y  con VERSION completo
     //Codigo: CP-45
-    it('Learning Path con espacio en blanco en NAME', function () {
+    it('Learning Path con espacio en blanco en NAME y  con VERSION completo', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
@@ -15,6 +15,7 @@ describe('Learning Paths', function () {
 
         cy.get('.col-12.col-sm-6.order-last.text-right.mt-2.pt-2 > .btn-company-primary > .fas.fa-plus' ).click()
 
+        cy.get('.col-12.col-sm-6.order-last.text-right.mt-2.pt-2 > .btn-company-primary > .fas.fa-plus' ).click()
 
         cy.get('.card-body').click().then(
             function(){
@@ -23,9 +24,9 @@ describe('Learning Paths', function () {
         );
     });
 
-    // //Nombre de la prueba: Learning Path con espacio en blanco en NAME
+    // //Nombre de la prueba: Learning Path con espacio en blanco en VERSION Y con NAME completo
     // //Codigo: CP-46
-    // it('Learning Path con espacio en blanco en VERSION', function () {
+    // it('Learning Path con espacio en blanco en VERSION Y con NAME completo', function () {
     //     cy.get('#email').type('qatec2022@gmail.com');
     //     cy.get('#password').type('qatecjnsc2022');
     //     cy.get('.btn > .m-0').click();
@@ -44,9 +45,9 @@ describe('Learning Paths', function () {
     //     );
     // });
 
-    // //Nombre de la prueba: Learning Path con espacio en blanco en Los 2 espacios completos y con NAME y VERSION ya existentes
+    // //Nombre de la prueba: Learning Path con NAME  ya existente
     // //Codigo: CP-47
-    // it('Learning Path con espacio en blanco en Los 2 espacios completos y con NAME y VERSION ya existentes', function () {
+    // it('Learning Path con NAME ya existente', function () {
     //     cy.get('#email').type('qatec2022@gmail.com');
     //     cy.get('#password').type('qatecjnsc2022');
     //     cy.get('.btn > .m-0').click();
@@ -56,7 +57,7 @@ describe('Learning Paths', function () {
 
     //     cy.get('.col-12.col-sm-6.order-last.text-right.mt-2.pt-2 > .btn-company-primary > .fas.fa-plus' ).click()
 
-    
+
     //     cy.get('.card-body').click().then(
     //         function(){
     //             cy.get('.invalid-feedback').should('contain.text', "This field is required");
