@@ -11,7 +11,7 @@ describe('Bots', function () {
         cy.get('.btn > .m-0').click();
         cy.get('.list-group > [href="#securityMenu"] > .d-flex').click();
         cy.get('.list-group > #securityMenu > [href="/bots"]').click();
-        cy.get('.col-md-2 > :nth-child(1)').click()
+        cy.get('.col-md-6 > :nth-child(1)').click()
         cy.get('.card-body').click().then(
             function(){
                 cy.get('.invalid-feedback').should('contain.text', "This field is required");
@@ -28,6 +28,9 @@ describe('Bots', function () {
         cy.get('.list-group > [href="#securityMenu"] > .d-flex').click();
         cy.get('.list-group > #securityMenu > [href="/bots"]').click();
         cy.get('.col-md-6 > :nth-child(1)').click()
+        cy.get(
+            '.col-sm-12.col-md-6 > .company-control'
+          ).click();
         cy.get('#name').type("qatec2022")
         cy.get('.border-0').click()
         cy.get('.card-body').click().then(

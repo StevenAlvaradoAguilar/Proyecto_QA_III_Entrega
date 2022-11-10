@@ -12,12 +12,12 @@ describe('Equipment', function () {
         cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
         cy.get('.list-group > #inventoryMenu > .list-group-item').click();
         cy.get('.col-md-3 > :nth-child(1)').click()
-        cy.get('#type').select("Other");
-        cy.get('span > #internal_key').type('ejemplo')
-        cy.get('#serial_number').type('123')
-        cy.get('span > #model').type('ejemplo')
-        cy.get('.trix-content').type('ejemplo')
-        cy.get('.btn-primary').should('be.disabled');
+        cy.get('#serial_number').click()
+        cy.get('.card-body').click().then(
+        function(){
+            cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
+        }
+    );
     });
 
     //Nombre de la prueba: Internal key con espacios en blanco
@@ -29,7 +29,7 @@ describe('Equipment', function () {
         cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
         cy.get('.list-group > #inventoryMenu > .list-group-item').click();
         cy.get('.col-md-3 > :nth-child(1)').click()
-        cy.get('span > #internal_key').click()
+        cy.get('#serial_number').click()
         cy.get('.card-body').click().then(
             function(){
                 cy.get(':nth-child(3) > span > .invalid-feedback').should('contain.text', "This field is required");
