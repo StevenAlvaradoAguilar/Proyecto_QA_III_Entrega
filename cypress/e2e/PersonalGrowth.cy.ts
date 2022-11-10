@@ -48,8 +48,8 @@ describe('Learning Paths', function () {
     
   });
 
-  // //Nombre de la prueba: Learning Path con NAME y versión ya existente , debe dar error
-  // //Codigo: CP-48
+  //Nombre de la prueba: Learning Path con NAME y versión ya existente , debe dar error
+  //Codigo: CP-48
   it('Learning Path con NAME y versión ya existente, debe dar error', function () {
       cy.get('#email').type('qatec2022@gmail.com');
       cy.get('#password').type('qatecjnsc2022');
@@ -71,8 +71,8 @@ describe('Learning Paths', function () {
   });
 
 
-  // //Nombre de la prueba: Learning Path con NAME  ya existente pero con versión distinta , no debe dar error
-  // //Codigo: CP-49
+  //Nombre de la prueba: Learning Path con NAME  ya existente pero con versión distinta , no debe dar error
+  //Codigo: CP-49
   it('Learning Path con NAME  ya existente pero con versión distinta, no debe dar error', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
