@@ -3,8 +3,12 @@ describe('Estimations', function () {
         cy.visit('https://tec.gacela.io/estimations');
     });
 
-    //Nombre de la prueba: Description con espacio en blanco en Estimation
-    //Codigo: CP-13
+    /*
+    Nombre de la prueba: Description con espacio en blanco en Estimation
+    Objetivo: Probar la funcionalidad al agregar un dato en Estimations
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
+    */
     it('Description con espacio en blanco en Estimation', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');

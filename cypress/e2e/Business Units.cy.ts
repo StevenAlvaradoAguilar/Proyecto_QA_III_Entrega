@@ -3,8 +3,13 @@ describe('Business Units', function () {
         cy.visit('https://tec.gacela.io/business_units');
     });
 
-    // Nombre: 'Description con espacio en blanco en Business Units'
-    // Codigo: CP-21, CP-39
+    /*
+    Nombre de la prueba: Description con espacio en blanco en Business Units
+    Objetivo: Probar la funcionalidad de Business Units
+    Datos de prueba: Description: ----
+    Resultado esperado: Exito ya que al ingresar un Business Units sin descripcion deberia de 
+                        devolver "This field is required"
+    */
     it('Description con espacio en blanco en Business Units', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
@@ -23,8 +28,12 @@ describe('Business Units', function () {
         );
     });
     
-    // Nombre: 'Description con con un nombre para buscar en Business Units'
-    // Codigo: CP-22, CP-40
+    /*
+    Nombre de la prueba: Description con un nombre para buscar en Business Units
+    Objetivo: Probar la funcionalidad de Business Units
+    Datos de prueba: Description: Ejemplo
+    Resultado esperado: Se espera exito, ya que se puede agregar la descripcion
+    */
     it('Description con un nombre para buscar en Business Units', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
@@ -39,7 +48,7 @@ describe('Business Units', function () {
 
         cy.get('.pmo-content').click().then(
             function(){
-               cy.get('.invalid-feedback').should('contain.text', "This field is required");
+               cy.get('.invalid-feedback').should('contain.text', "");
             }
         );
     }); 

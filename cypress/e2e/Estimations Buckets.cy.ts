@@ -3,8 +3,12 @@ describe('Estimations Buckets', function () {
         cy.visit('https://tec.gacela.io/estimation_buckets');
     });
 
-    //Nombre de la prueba: Description con espacio en blanco en Estimation Buckets
-    //Codigo: CP-12
+    /*
+    Nombre de la prueba:  Description con espacio en blanco en Estimation Buckets
+    Objetivo: Probar la funcionalidad al agregar un buckets con espacio en blanco.
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
+    */
     it('Description con espacio en blanco en Estimation Buckets', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
