@@ -1,6 +1,6 @@
 describe('Learning Paths', function () {
   beforeEach(function () {
-    cy.visit('https://tec.gacela.io/learning_paths');
+    cy.visit('https://tec.gacela.io/');
   });
 
   //Nombre de la prueba: Learning Path con espacio en blanco en NAME y  con VERSION completo Boton Save desabilitado

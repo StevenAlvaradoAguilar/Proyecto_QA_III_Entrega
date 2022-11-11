@@ -1,6 +1,6 @@
 describe('Learning Paths', function () {
   beforeEach(function () {
-    cy.visit('https://tec.gacela.io/learning_paths');
+    cy.visit('https://tec.gacela.io/');
   });
 
   //Nombre de la prueba: Editanto Equipment Internal Key vacía botón Save desabilitado
@@ -13,15 +13,14 @@ describe('Learning Paths', function () {
     cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
     cy.get('.list-group > #inventoryMenu > .list-group-item').click();
 
-    cy.get('.col-md-4 > :nth-child(1)').click()
-    //cy.get('#serial_number').type(' ')
+    cy.get('.row > :nth-child(1) .card-body  > .btn.btn-company-primary > .fas.fa-pen').click()
 
-    cy.get('.card-body').click().then(
-        function(){
-            cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
-        }
-    );
+    cy.get('.card-body > .row > :nth-child(3) .form-control').clear();
+
+    cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
+
   });
+
   //Nombre de la prueba: Editanto Equipment Serial Number vacío botón Save desabilitado
   //Codigo: CP-56
   it('Editanto Equipment Serial Number vacío, botón Save desabilitado', function () {
@@ -32,15 +31,14 @@ describe('Learning Paths', function () {
     cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
     cy.get('.list-group > #inventoryMenu > .list-group-item').click();
 
-    cy.get('.col-md-4 > :nth-child(1)').click()
-    cy.get('#serial_number').click()
+    cy.get('.row > :nth-child(1) .card-body  > .btn.btn-company-primary > .fas.fa-pen').click()
 
-    cy.get('.card-body').click().then(
-        function(){
-            cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
-        }
-    );
+    cy.get('.card-body > .row > :nth-child(4) .form-control').clear();
+
+    cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
   });
+
+
   //Nombre de la prueba: Editanto Equipment Internal Key vacía botón, Solicita Internal Key
   //Codigo: CP-57
   it('Editanto Equipment Internal Key vacía botón, Solicita Internal Key', function () {
@@ -51,12 +49,12 @@ describe('Learning Paths', function () {
     cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
     cy.get('.list-group > #inventoryMenu > .list-group-item').click();
 
-    cy.get('.col-md-4 > :nth-child(1)').click()
-    cy.get('#serial_number').click()
+    cy.get('.row > :nth-child(1) .card-body  > .btn.btn-company-primary > .fas.fa-pen').click()
 
-    cy.get('.card-body').click().then(
+    cy.get('.card-body > .row > :nth-child(3) .form-control').clear().then(
+
         function(){
-            cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
+            cy.get(':nth-child(3) > span > .invalid-feedback').should('contain.text', "This field is required");
         }
     );
   });
@@ -70,15 +68,17 @@ describe('Learning Paths', function () {
     cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
     cy.get('.list-group > #inventoryMenu > .list-group-item').click();
 
-    cy.get('.col-md-4 > :nth-child(1)').click()
-    cy.get('#serial_number').click()
+    cy.get('.row > :nth-child(1) .card-body  > .btn.btn-company-primary > .fas.fa-pen').click()
 
-    cy.get('.card-body').click().then(
-        function(){
-            cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
-        }
+    cy.get('.card-body > .row > :nth-child(4) .form-control').clear().then(
+
+      function(){
+          cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
+      }
     );
   });
+
+
   //Nombre de la prueba: Editanto Equipment Model vacío, botón Save desabilitado
   //Codigo: CP-59
   it('Editanto Equipment Model vacío, botón Save desabilitado', function () {
@@ -89,14 +89,13 @@ describe('Learning Paths', function () {
     cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
     cy.get('.list-group > #inventoryMenu > .list-group-item').click();
 
-    cy.get('.col-md-4 > :nth-child(1)').click()
-    cy.get('#serial_number').click()
-    cy.get('.card-body').click().then(
-        function(){
-            cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
-        }
-    );
+    cy.get('.row > :nth-child(1) .card-body  > .btn.btn-company-primary > .fas.fa-pen').click()
+
+    cy.get('.card-body > .row > :nth-child(5) .form-control').clear();
+
+    cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
   });
+
   //Nombre de la prueba: Editanto Equipment Description vacía, botónSave desabilitado
   //Codigo: CP-60
   it('Editanto Equipment Description vacía, botón Save desabilitado', function () {
@@ -107,15 +106,14 @@ describe('Learning Paths', function () {
     cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
     cy.get('.list-group > #inventoryMenu > .list-group-item').click();
 
-    cy.get('.col-md-4 > :nth-child(1)').click()
-    cy.get('#serial_number').click()
+    cy.get('.row > :nth-child(1) .card-body  > .btn.btn-company-primary > .fas.fa-pen').click()
 
-    cy.get('.card-body').click().then(
-        function(){
-            cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
-        }
-    );
+    cy.get('.card-body > .row > :nth-child(6) .trix-content').clear();
+
+
+    cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
   });
+
 
   afterEach(function () {
     cy.reload();
