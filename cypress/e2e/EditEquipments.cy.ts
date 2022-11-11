@@ -3,8 +3,13 @@ describe('Learning Paths', function () {
     cy.visit('https://tec.gacela.io/');
   });
 
-  //Nombre de la prueba: Editanto Equipment Internal Key vacía botón Save desabilitado
-  //Codigo: CP-48
+  
+  /*
+    Nombre de la prueba: Editanto Equipment Internal Key vacía botón Save desabilitado
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Exito, ya que el boton debe de estar desabilitado
+    */
   it('Editanto Equipment Internal Key vacía botón, Save desabilitado', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -21,8 +26,12 @@ describe('Learning Paths', function () {
 
   });
 
-   //Nombre de la prueba: Editanto Equipment Internal Key vacía botón, Solicita Internal Key
-  //Codigo: CP-49
+   /*
+    Nombre de la prueba: Editanto Equipment Internal Key vacía botón, Solicita Internal Key
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Exito ya que al editar deberia de devolver "This field is required"
+    */
   it('Editanto Equipment Internal Key vacía botón, Solicita Internal Key', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -41,9 +50,13 @@ describe('Learning Paths', function () {
     );
   });
 
+  /*
+    Nombre de la prueba: Editanto Equipment Serial Number vacío botón Save desabilitado
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Exito, ya que el boton debe de estar desabilitado
+    */
 
-  //Nombre de la prueba: Editanto Equipment Serial Number vacío botón Save desabilitado
-  //Codigo: CP-50
   it('Editanto Equipment Serial Number vacío, botón Save desabilitado', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -62,6 +75,13 @@ describe('Learning Paths', function () {
 
   //Nombre de la prueba: Editanto Equipment Serial Number vacío, Solicita Serial Number
   //Codigo: CP-51
+
+  /*
+    Nombre de la prueba: Editanto Equipment Serial Number vacío, Solicita Serial Number
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Exito ya que al editar deberia de devolver "This field is required"
+    */
   it('Editanto Equipment Serial Number vacío, Solicita Serial Number', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -80,9 +100,12 @@ describe('Learning Paths', function () {
     );
   });
 
-
-  //Nombre de la prueba: Editanto Equipment Model vacío, botón Save desabilitado
-  //Codigo: CP-52
+  /*
+    Nombre de la prueba: Editanto Equipment Model vacío, botón Save desabilitado
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Exito, ya que el boton debe de estar desabilitado
+    */
   it('Editanto Equipment Model vacío, botón Save desabilitado', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -98,8 +121,13 @@ describe('Learning Paths', function () {
     cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
   });
 
-  //Nombre de la prueba: Editanto Equipment Model vacío, Solicita Model
-  //Codigo: CP-53
+
+  /*
+    Nombre de la prueba: Editanto Equipment Model vacío, Solicita Model
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Exito ya que al editar deberia de devolver "This field is required"
+    */
   it('Editanto Equipment Model vacío, Solicita Model', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -118,12 +146,12 @@ describe('Learning Paths', function () {
     );
   });
 
-
-
-
-
-  //Nombre de la prueba: Editanto Equipment Description vacía, botón Save desabilitado
-  //Codigo: CP-54
+  /*
+    Nombre de la prueba: Editanto Equipment Description vacía, botón Save desabilitado
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Exito, ya que el boton debe de estar desabilitado
+    */
   it('Editanto Equipment Description vacía, botón Save desabilitado', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -140,8 +168,12 @@ describe('Learning Paths', function () {
     cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
   });
 
-  //Nombre de la prueba: Editanto Equipment Description vacía, Solicita descripción
-  //Codigo: CP-55
+  /*
+    Nombre de la prueba: Editanto Equipment Description vacía, Solicita descripción
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Exito ya que al editar deberia de devolver "This field is required"
+    */
   it('Editanto Equipment Description vacía, Solicita descripción', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -160,9 +192,13 @@ describe('Learning Paths', function () {
     );
   });
 
+  /*
+    Nombre de la prueba: Editanto Equipment Sin fecha, botón Save desabilitado
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Exito, ya que el boton debe de estar desabilitado
+    */
 
-   //Nombre de la prueba: Editanto Equipment Sin fecha, botón Save desabilitado
-  //Codigo: CP-56
   it('Editanto Equipment Sin fecha, botón Save desabilitado', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
