@@ -10,7 +10,7 @@ describe('Clients', function () {
     Resultado esperado: Exito ya que al ingresar un Clients sin descripcion deberia de 
                         devolver "This field is required"
     */
-    it('Description con espacio en blanco en Clients', function () {
+    it('Description con espacio en blanco en Clients y en Type', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
