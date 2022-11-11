@@ -3,8 +3,13 @@ describe('Welcome', function () {
         cy.visit('https://gacela.io/welcome');
     });
 
-    // Nombre = Name Company con espacio en blaco
-    // Codigo: CP-3, CP-43
+    /*
+    Nombre de la prueba: Name Company con espacio en blaco
+    Objetivo: Probar la funcionalidad de Rate Per Resource
+    Datos de prueba: 
+    Resultado esperado: Que la prueba genere un aviso de que se debe de ingresar el nombre de una Company
+    */
+
     it('Name Company con espacio en blanco', function () {
 
         cy.xpath('//*[@id="component"]/button').click(

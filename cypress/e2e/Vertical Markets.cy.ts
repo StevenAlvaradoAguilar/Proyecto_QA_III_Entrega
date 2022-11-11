@@ -3,8 +3,12 @@ describe('Vertical Markets', function () {
         cy.visit('https://tec.gacela.io/vertical_markets');
     });
 
-    //Nombre de la prueba: Description con espacio en blanco en Vertical Markets
-    //Codigo: CP-11
+    /*
+    Nombre de la prueba: Description con espacio en blanco en Vertical Markets
+    Objetivo: Probar la funcionalidad al agregar un dato Vertical Markets
+    Datos de prueba: Description: Vacia
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
+    */
     it('Description con espacio en blanco en Vertical Markets ', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
