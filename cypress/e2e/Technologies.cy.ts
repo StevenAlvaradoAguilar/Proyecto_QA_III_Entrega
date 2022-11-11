@@ -4,7 +4,13 @@ describe('Technologies', function () {
     });
 
     //Nombre de la prueba: Descripcion con espacio blanco en Technologies
-    //Codigo: CP-10, CP-50
+    
+    /*
+    Nombre de la prueba: Descripcion con espacio blanco en Technologies
+    Objetivo: Probar la funcionalidad del modulo Technologies
+    Datos de prueba: Description: Vacia
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
+    */
     it('Description con espacio en blanco en Technologies', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
