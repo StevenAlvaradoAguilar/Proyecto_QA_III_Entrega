@@ -9,15 +9,12 @@ describe('Partners', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/partners"]').click();
-        cy.get('.col-md-2 > :nth-child(1)').click()
-        cy.get('span > #type').select("Consultant");
-        cy.get('.pmo-content').click().then(
-            function(){
-                cy.get(':nth-child(1) > span > .invalid-feedback').should('contain.text', "This field is required");
-            }
-        );
+        
+        cy.get('.col-md-6 > :nth-child(2)').click()
+        //cy.get('span > #type').select("Consultant");
     });
 
     //Nombre de la prueba: Type con espacio en blanco en Partners
@@ -26,8 +23,10 @@ describe('Partners', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/partners"]').click();
+
         cy.get('.col-md-2 > :nth-child(1)').click()
         cy.get('span > #name').type("Nuevo Partner")
         cy.get('#website').type("www.partner.com")

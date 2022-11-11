@@ -9,14 +9,11 @@ describe('Projects', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/projects"]').click();
-        cy.get('.col-md-2 > nth-child(1)').click();
-         cy.get('.pmo-content').click().then(
-             function(){
-                cy.get(':nth-child(1) > :nth-child(1) > span > .invalid-feedback').should('contain.text', "This field is required");
-             }
-         );
+
+        cy.get('.col-md-6 > :nth-child(1)').click();
     });
 
     //Nombre de la prueba: Client con espacio en blanco  
@@ -25,11 +22,16 @@ describe('Projects', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/projects"]').click();
+
         cy.get('.col-md-2 > nth-child(1)').click();
+
         cy.get('span > #name').type('lis');
+
         cy.get('#client_id').type(' ');
+
         cy.get('.card-body > nth-child(2)').click().then(
              function(){
                 cy.get('.card-body > :nth-child(1) > :nth-child(2) > span > .invalid-feedback').should('contain.text', "This field is required");
