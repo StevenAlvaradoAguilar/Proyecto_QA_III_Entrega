@@ -3,8 +3,12 @@ describe('Equipment', function () {
         cy.visit('https://tec.gacela.io/equipment');
     });
 
-    //Nombre de la prueba: Date sin seleccionar
-    //Codigo: CP-17
+    /*
+    Nombre de la prueba: Date sin seleccionar
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
+    */
     it('Date sin seleccionar', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
@@ -20,8 +24,13 @@ describe('Equipment', function () {
     );
     });
 
-    //Nombre de la prueba: Internal key con espacios en blanco
-    //Codigo: CP-18
+    
+    /*
+    Nombre de la prueba: Internal key con espacios en blanco
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Internal key
+    */
     it('Internal key con espacios en blanco', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
@@ -37,8 +46,13 @@ describe('Equipment', function () {
         );
     });
 
-    //Nombre de la prueba: Serial number con espacios en blanco
-    //Codigo: CP-19
+
+    /*
+    Nombre de la prueba: Serial number con espacios en blanco
+    Objetivo: Probar la funcionalidad al editar un Equipment 
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la el Serial
+    */
     it('Serial number con espacios en blanco', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
