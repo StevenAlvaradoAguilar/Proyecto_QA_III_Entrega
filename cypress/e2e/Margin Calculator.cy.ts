@@ -5,7 +5,7 @@ describe('Margin Calculator', function () {
 
     /*
     Nombre de la prueba: Description con espacio en blanco en Margin Calculator
-    Objetivo: Probar la funcionalidad al agregar un dato en Estimations
+    Objetivo: Probar la funcionalidad del modulo Magin Calculator
     Datos de prueba: 
     Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
     */
