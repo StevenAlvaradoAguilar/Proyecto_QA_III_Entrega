@@ -3,8 +3,12 @@ describe('Job Titles', function () {
         cy.visit('https://tec.gacela.io/job_titles');
     });
 
-    //Nombre de la prueba: Internal description con espacio en blanco en Talent Management
-    //Codigo: CP-14
+    /*
+    Nombre de la prueba: Internal description con espacio en blanco en Talent Management
+    Objetivo: Probar la funcionalidad al ingresar un Job Tittle
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Internal Description
+    */
     it('Internal description con espacio en blanco en Talent Management', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
@@ -16,8 +20,12 @@ describe('Job Titles', function () {
         cy.get('.col-md-6 > :nth-child(1)').click()
     });
 
-    //Nombre de la prueba: External description con espacio en blanco en Talent Management
-    //Codigo: CP-15
+    /*
+    Nombre de la prueba: External description con espacio en blanco en Talent Management
+    Objetivo: Probar la funcionalidad al ingresar un Job Tittle
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la External Description
+    */
     it('External description con espacio en blanco en Talent Management', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
