@@ -35,9 +35,7 @@ describe('Bots', function () {
         cy.get('.list-group > #securityMenu > [href="/bots"]').click();
         cy.get('.col-md-6 > :nth-child(1)').click()
 
-        cy.get(
-            '.col-sm-12.col-md-6 > .company-control'
-          ).click();
+        cy.get('.col-sm-12.col-md-6 > .company-control').click();
         cy.get('#name').type("qatec2022")
         cy.get('.company-control').click()
 

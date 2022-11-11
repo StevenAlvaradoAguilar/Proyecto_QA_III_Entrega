@@ -13,10 +13,13 @@ describe('Equipment', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
         cy.get('.list-group > #inventoryMenu > .list-group-item').click();
+
         cy.get('.col-md-3 > :nth-child(1)').click()
         cy.get('#serial_number').click()
+
         cy.get('.card-body').click().then(
         function(){
             cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
@@ -35,10 +38,13 @@ describe('Equipment', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+        
         cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
         cy.get('.list-group > #inventoryMenu > .list-group-item').click();
         cy.get('.col-md-3 > :nth-child(1)').click()
+
         cy.get('#serial_number').click()
+
         cy.get('.card-body').click().then(
             function(){
                 cy.get(':nth-child(3) > span > .invalid-feedback').should('contain.text', "This field is required");
@@ -57,10 +63,13 @@ describe('Equipment', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#inventoryMenu"] > .d-flex').click();
         cy.get('.list-group > #inventoryMenu > .list-group-item').click();
         cy.get('.col-md-3 > :nth-child(1)').click()
+
         cy.get('#serial_number').click()
+        
         cy.get('.card-body').click().then(
             function(){
                 cy.get(':nth-child(4) > span > .invalid-feedback').should('contain.text', "This field is required");
