@@ -5,7 +5,7 @@ describe('Vertical Markets', function () {
 
     /*
     Nombre de la prueba: Description con espacio en blanco en Vertical Markets
-    Objetivo: Probar la funcionalidad al agregar un dato en Estimations
+    Objetivo: Probar la funcionalidad al agregar un dato Vertical Markets
     Datos de prueba: Description: Vacia
     Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
     */
