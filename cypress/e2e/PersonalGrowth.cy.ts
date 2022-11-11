@@ -2,10 +2,15 @@ describe('Learning Paths', function () {
   beforeEach(function () {
     cy.visit('https://tec.gacela.io/');
   });
-
-  //Nombre de la prueba: Learning Path con espacio en blanco en NAME y  con VERSION completo Boton Save desabilitado
-  //Codigo: CP-46
-  it('Learning Path con espacio en blanco en NAME y con VERSION completo Boton Save desabilitado', function () {
+/*
+  Nombre: Verificar crear Learning Path sin Nombre
+  Objetivo: Probar la creación de un Learning Path sin nombre
+  Datos de la Prueba:
+            Nombre: Vacío
+            Versión: '1'
+  Resultado esperado: Que de desabilite el botón de guardar
+  */
+  it('Verificar crear Learning Path sin Nombre', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -24,9 +29,15 @@ describe('Learning Paths', function () {
     cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
   });
 
-   //Nombre de la prueba: Learning Path con espacio en blanco en VERSION y con NAME completo Boton Save desabilitado
-   //Codigo: CP-47
-  it('Learning Path con espacio en blanco en VERSION y con NAME completo Boton Save desabilitado', function () {
+  /*
+  Nombre: Verificar crear Learning Path sin Versión
+  Objetivo: Probar la creación de un Learning Path sin Versión
+  Datos de la Prueba:
+            Nombre: 'Prueba'
+            Versión: Vacío
+  Resultado esperado: Que de desabilite el botón de guardar
+  */
+  it('Verificar crear Learning Path sin Versión', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -48,9 +59,17 @@ describe('Learning Paths', function () {
     
   });
 
-  //Nombre de la prueba: Learning Path con NAME y versión ya existente , debe dar error
-  //Codigo: CP-48
-  it('Learning Path con NAME y versión ya existente, debe dar error', function () {
+ 
+ /*
+  Nombre: Verificar crear Learning Path Con Nombre y Versión ya existente
+  Objetivo: Probar la creación de un Learning Path si el nombre y la versión ya están utilizadas
+  Datos de la Prueba:
+            Nombre: 'QA','Prueba'
+            Versión: '1.0.0','1.0.0'
+  Resultado esperado: Que la prueba de error y no permita guardar el Learning Path creado
+  */
+
+  it('Verificar crear Learning Path Con Nombre y Versión ya existente', function () {
       cy.get('#email').type('qatec2022@gmail.com');
       cy.get('#password').type('qatecjnsc2022');
       cy.get('.btn > .m-0').click();
@@ -71,9 +90,16 @@ describe('Learning Paths', function () {
   });
 
 
-  //Nombre de la prueba: Learning Path con NAME  ya existente pero con versión distinta , no debe dar error
-  //Codigo: CP-49
-  it('Learning Path con NAME  ya existente pero con versión distinta, no debe dar error', function () {
+  /*
+  Nombre: Verificar crear Learning Path Con Nombre ya existente pero con otra Versión
+  Objetivo: Probar la creación de un Learning Path si el nombre ya existe pero con distinta versión
+  Datos de la Prueba:
+            Nombre: 'QA','Prueba'
+            Versión: '1.0.1','1.0.0'
+  Resultado esperado: Que la prueba permita guardar el Learning Path creado
+  */
+
+  it('Verificar crear Learning Path Con Nombre ya existente pero con otra Versión', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -94,9 +120,16 @@ describe('Learning Paths', function () {
 });
 
 
-  //Nombre de la prueba: Learning Path con espacio en blanco en NAME solicitando el NAME
-  //Codigo: CP-50
-  it('Learning Path con espacio en blanco en NAME solicitando el NAME', function () {
+    /*
+  Nombre: Verificar crear Learning Path sin nombre y solicitarlo
+  Objetivo: Probar la creación de un Learning Path sin el nombre y que lo solicite
+  Datos de la Prueba:
+            Nombre: Vacío
+            Versión: Vacío
+  Resultado esperado: Que la prueba genere un aviso de que se requiere llenar el nombre
+  */
+
+  it('Verificar crear Learning Path sin nombre y solicitarlo', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -117,9 +150,16 @@ describe('Learning Paths', function () {
     );
   });
 
-  //Nombre de la prueba: Learning Path con espacio en blanco en version solicitando el VERSION
-  //Codigo: CP-51
-  it('Learning Path con espacio en blanco en version solicitando el VERSION', function () {
+      /*
+  Nombre: Verificar crear Learning Path sin versión y solicitarla
+  Objetivo: Probar la creación de un Learning Path sin la versión y que la solicite
+  Datos de la Prueba:
+            Nombre: Vacío
+            Versión: Vacío
+  Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la versión
+  */
+
+  it('Verificar crear Learning Path sin versión y solicitarla', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -140,9 +180,16 @@ describe('Learning Paths', function () {
     );
   });
 
-  //Nombre de la prueba: Learning Path con 2 espacios llenos, Boton Save habilitado
-  //Codigo: CP-52
-  it('Learning Path con 2 espacios llenos, Boton Save habilitado', function () {
+        /*
+  Nombre: Verificar crear Learning Path con un nombre y una versión
+  Objetivo: Probar la creación de un Learning Path con un nombre y una versión
+  Datos de la Prueba:
+            Nombre: 'Prueba'
+            Versión: '1'
+  Resultado esperado: Que se habilite el botón de guardado
+  */
+
+  it('Verificar crear Learning Path con un nombre y una versión', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
