@@ -22,14 +22,6 @@ describe('Costs Per Resource', function () {
 
         cy.get('.vs__search').type(' ').should("be.empty")
         cy.get('.btn').click()
-
-        cy.get('.btn').click().then(
-            function () {
-                cy.get('.vd-picker>').click()                                 
-                cy.get('[type="button"][data-date="2022-06-14"] > .vd-picker__table-day__wrapper').click()
-                cy.get('.btn-company-primary').should('be.disabled');
-            }
-        );
     });
 
     //Acierta, porque se espera que al buscar un usuario retorne empty
