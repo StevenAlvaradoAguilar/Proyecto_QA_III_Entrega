@@ -38,12 +38,6 @@ describe('Bots', function () {
         cy.get('.col-sm-12.col-md-6 > .company-control').click();
         cy.get('#name').type("qatec2022")
         cy.get('.company-control').click()
-
-        /*cy.get('.card-body').click().then(
-            function(){
-                cy.get('.invalid-feedback').should('contain.text', "This field is required");
-            }
-        );*/
     });
 
     afterEach(function () {
