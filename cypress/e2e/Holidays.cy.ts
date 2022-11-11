@@ -3,8 +3,12 @@ describe('Holidays', function () {
         cy.visit('https://tec.gacela.io/vacation/holidays');
     });
 
-    //Nombre de la prueba: Description con espacio en blanco en Holidays
-    //Codigo: CP-16
+    /*
+    Nombre de la prueba: Description con espacio en blanco en Holidays
+    Objetivo: Probar la funcionalidad al agregar un dato en Holidays
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
+    */
     it('Description con espacio en blanco en Holidays', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
