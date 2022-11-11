@@ -9,14 +9,11 @@ describe('Bots', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#securityMenu"] > .d-flex').click();
         cy.get('.list-group > #securityMenu > [href="/bots"]').click();
+
         cy.get('.col-md-6 > :nth-child(1)').click()
-        cy.get('.card-body').click().then(
-            function(){
-                cy.get('.invalid-feedback').should('contain.text', "This field is required");
-            }
-        );
     });
 
     //Nombre de la prueba: Bot sin Permissions
@@ -25,19 +22,22 @@ describe('Bots', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#securityMenu"] > .d-flex').click();
         cy.get('.list-group > #securityMenu > [href="/bots"]').click();
         cy.get('.col-md-6 > :nth-child(1)').click()
+
         cy.get(
             '.col-sm-12.col-md-6 > .company-control'
           ).click();
         cy.get('#name').type("qatec2022")
-        cy.get('.border-0').click()
-        cy.get('.card-body').click().then(
+        cy.get('.company-control').click()
+
+        /*cy.get('.card-body').click().then(
             function(){
                 cy.get('.invalid-feedback').should('contain.text', "This field is required");
             }
-        );
+        );*/
     });
 
     afterEach(function () {

@@ -90,11 +90,7 @@ describe('Learning Paths', function () {
     cy.get('.btn.btn-company-primary.btn-block').click()
 
     cy.get('.card-body > :nth-child(1)  #name').type('Prueba');
-      cy.get('#version').type('1.0.0');
-     
-
-    
-
+    cy.get('#version').type('1.0.0');
 });
 
 

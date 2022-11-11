@@ -16,7 +16,7 @@ describe('Learning Paths', function () {
     ).click();
 
     cy.get(
-      '.col-12.col-sm-6.order-last.text-right.mt-2.pt-2 > .btn-company-primary > .fas.fa-plus'
+      '.col-12.col-sm-6.order-last.text-right.mt-2.pt-2 > .btn-company-primary > .fas.fa-plus'  
     ).click();
 
     cy.get('#version').type('1');

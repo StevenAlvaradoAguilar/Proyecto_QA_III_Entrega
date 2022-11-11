@@ -9,9 +9,13 @@ describe('Clients', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/clients"]').click();
-        cy.get('.col-md-2 > :nth-child(1)').click();
+
+        cy.get('.text-right > :nth-child(1)').click();
+        cy.get('#description').type(' ');
+        
         cy.get('.pmo-content').click().then(
             function(){
                 cy.get('.invalid-feedback').should('contain.text', "This field is required");
@@ -25,10 +29,13 @@ describe('Clients', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/clients"]').click();
-        cy.get('.col-md-2 > :nth-child(1)').click();
-        cy.get('#name').type('Hoalala');
+
+        cy.get('.text-right > :nth-child(1)').click();
+        cy.get('#description').type('Hoalala');
+
         cy.get('.pmo-content').click().then(
             function(){
                 cy.get('.invalid-feedback').should('contain.text', "This field is required");
