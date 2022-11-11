@@ -3,9 +3,15 @@ describe('Learning Paths', function () {
     cy.visit('https://tec.gacela.io/');
   });
 
-   //Nombre de la prueba: Editar Learning Path con espacio en blanco en NAME y con VERSION completo Boton Save desabilitado
-   //Codigo: CP-57
-  it('Editar Learning Path con espacio en blanco en NAME y con VERSION completo Boton Save desabilitado', function () {
+       /*
+  Nombre: Verificar editar Learning Path, eliminando el Name
+  Objetivo: Probar la edición de un Learning Path, eliminando el Name
+  Datos de la Prueba:
+            Name: Vacío
+  Resultado esperado: Que se desabilite el botón de guardado
+  */
+
+  it('Verificar editar Learning Path, eliminando el Name', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -18,13 +24,18 @@ describe('Learning Paths', function () {
 
     cy.get('.card-body > :nth-child(1) #name').clear();
 
-
     cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
   });
 
-     //Nombre de la prueba: Editar Learning Path con espacio en blanco en NAME, Solicita el NAME
-   //Codigo: CP-58
-   it('Editar Learning Path con espacio en blanco en NAME, Solicita el NAME', function () {
+        /*
+Nombre: Verificar editar Learning Path, eliminando el Name y que este sea solicitado
+  Objetivo: Probar la edición de un Learning Path, eliminando el Name
+  Datos de la Prueba:
+            Name: Vacío
+  Resultado esperado: Que la prueba genere un aviso de que se requiere llenar el Name
+  */
+
+   it(' Verificar editar Learning Path, eliminando el Name y que este sea solicitado', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -45,8 +56,14 @@ describe('Learning Paths', function () {
   });
 
 
-     //Nombre de la prueba: Editar Learniing Path con espacio en blanco en VERSION y con NAME completo Boton Save desabilitado
-  //Codigo: CP-59
+       /*
+  Nombre: Verificar editar Learning Path, eliminando la Versión
+  Objetivo: Probar la edición de un Learning Path, eliminando la Versión
+  Datos de la Prueba:
+            Versión: Vacío
+  Resultado esperado: Que se desabilite el botón de guardado
+  */
+
   it('Editar Learniing Path con espacio en blanco en VERSION y con NAME completo Boton Save desabilitado', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -63,8 +80,14 @@ describe('Learning Paths', function () {
     cy.get('.btn.btn-company-primary.btn-block').should('be.disabled');
   });
 
-      //Nombre de la prueba: Editar Learniing Path con espacio en blanco en VERSION y con NAME completo, Solicita la VERSION
-  //Codigo: CP-59
+        /*
+  Nombre: Verificar editar Learning Path, eliminando la Versión y que esta sea solicitada
+  Objetivo: Probar la edición de un Learning Path, eliminando la Versión
+  Datos de la Prueba:
+            Versión: Vacío
+  Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Versión
+  */
+
   it('Editar Learniing Path con espacio en blanco en VERSION y con NAME completo, Solicita la VERSION', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
@@ -84,11 +107,6 @@ describe('Learning Paths', function () {
   );
 
   });
-
-
-
-
-
 
   afterEach(function () {
     cy.reload();
