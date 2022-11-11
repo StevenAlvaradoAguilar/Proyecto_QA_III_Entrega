@@ -3,8 +3,12 @@ describe('Bots', function () {
         cy.visit('https://tec.gacela.io/bots');
     });
 
-    //Nombre de la prueba: Name con espacio en blanco en Bots
-    //Codigo: CP-34
+    /*
+    Nombre de la prueba: Name con espacio en blanco en Bots
+    Objetivo: Probar la funcionalidad de agregar un bot sin nombre
+    Datos de prueba: Name: ----
+    Resultado esperado: Se espera que se pueda registrar el bot con exito.
+    */
     it('Name con espacio en blanco en Bots', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
@@ -16,8 +20,12 @@ describe('Bots', function () {
         cy.get('.col-md-6 > :nth-child(1)').click()
     });
 
-    //Nombre de la prueba: Bot sin Permissions
-    //Codigo: CP-35
+    /*
+    Nombre de la prueba: Bot sin Permissions
+    Objetivo: Probar la funcionalidad de agregar un bot sin permissions
+    Datos de prueba: Permissios: ----
+    Resultado esperado: Se espera que succeda un error al registrar el bot.
+    */
     it('Bot sin Permissions', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
