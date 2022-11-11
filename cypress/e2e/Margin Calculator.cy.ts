@@ -3,8 +3,12 @@ describe('Margin Calculator', function () {
         cy.visit('https://tec.gacela.io/margin_calculator');
     });
 
-    //Nombre: 'Description con espacio en blanco en Margin Calculator'
-    //Codigo: CP-21, CP-39
+    /*
+    Nombre de la prueba: Description con espacio en blanco en Margin Calculator
+    Objetivo: Probar la funcionalidad al agregar un dato en Estimations
+    Datos de prueba: 
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
+    */
     it('Description con espacio en blanco en Margin Calculator', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
