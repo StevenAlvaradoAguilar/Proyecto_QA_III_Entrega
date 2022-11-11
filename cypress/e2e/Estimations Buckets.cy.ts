@@ -25,8 +25,12 @@ describe('Estimations Buckets', function () {
         );
     });
 
-    //Nombre de la prueba: Description con espacio con un nombre description en Estimation Buckets
-    //Codigo: CP-12
+    /*
+    Nombre de la prueba:  Description con espacio con un nombre description en Estimation Buckets
+    Objetivo: Probar la funcionalidad al agregar un buckets con espacio en blanco.
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que se requiere llenar la Descripción
+    */
     it('Description con espacio con un nombre description en Estimation Buckets', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
