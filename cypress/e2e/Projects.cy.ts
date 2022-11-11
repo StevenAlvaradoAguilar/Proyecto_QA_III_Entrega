@@ -26,20 +26,19 @@ describe('Projects', function () {
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/projects"]').click();
 
-        cy.get('.col-md-2 > :nth-child(2    )').click();
+        cy.get('.col-md-2 > :nth-child(6)').click();
 
-        cy.get('span > #name').type('lis');
+        cy.get('span > vs_selected > #name').type('lis');
 
         cy.get('#client_id').type(' ');
 
         cy.get('.company-control').click()
 
-        cy.get('.card-body > nth-child(2)').click().then(
+        /*cy.get('.card-body > nth-child(2)').click().then(
              function(){
                 cy.get('.card-body > :nth-child(1) > :nth-child(2) > span > .invalid-feedback').should('contain.text', "This field is required");
              }
-         );
-         
+        );*/
     });
 
     //Nombre de la prueba: Budget con espacio en blanco  
@@ -58,14 +57,12 @@ describe('Projects', function () {
         
         cy.get('#budget').type(' ');
 
-        cy.get('.card-body > :nth-child(2)').click().then(
+        /*cy.get('.card-body > :nth-child(2)').click().then(
              function(){
                 cy.get('.card-body > :nth-child(1) > :nth-child(3) > span > .invalid-feedback').should('contain.text', "This field is required");
             }
-         );
-         
+        );*/
     });
-
 
     //Nombre de la prueba: Type con espacio en blanco  
     //Codigo: CP-29, CP-57
@@ -73,17 +70,20 @@ describe('Projects', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/projects"]').click();
+
         cy.get('.col-md-2 > :nth-child(1)').click();
+
         cy.get('span > #name').type('QA');
         cy.get('span > #type').type(' ');
-        cy.get('.card-body > :nth-child(2)').click().then(
+
+        /*cy.get('.card-body > :nth-child(2)').click().then(
              function(){
                 cy.get(':nth-child(4) > :nth-child(1) > span > .invalid-feedback').should('contain.text', "This field is required");
              }
-         );
-         
+        );*/ 
     });
 
     //Nombre de la prueba: State con espacio en blanco  
@@ -92,16 +92,20 @@ describe('Projects', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/projects"]').click();
+
         cy.get('.col-md-2 > :nth-child(1)').click();
+
         cy.get('span > #name').type('QA');
         cy.get('span > #state').type(' ');
-        cy.get('.card-body > :nth-child(2)').click().then(
+
+        /*cy.get('.card-body > :nth-child(2)').click().then(
              function(){
                 cy.get(':nth-child(4) > :nth-child(2) > span > .invalid-feedback').should('contain.text', "This field is required");
              }
-         ); 
+        );*/ 
     });
 
     //Nombre de la prueba: Status con espacio en blanco  
@@ -110,16 +114,20 @@ describe('Projects', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
         cy.get('.btn > .m-0').click();
+
         cy.get('.list-group > [href="#projectsMenu"]').click();
         cy.get('.list-group > #projectsMenu > [href="/projects"]').click();
+
         cy.get('.col-md-2 > :nth-child(1)').click();
+
         cy.get('span > #name').type('QA');
         cy.get('#project_status_id').type(' ');
+
         cy.get('.card-body > :nth-child(2)').click().then(
              function(){
                 cy.get(':nth-child(5) > :nth-child(1) > span > .invalid-feedback').should('contain.text', "This field is required");
              }
-         ); 
+        ); 
     });
    
 
