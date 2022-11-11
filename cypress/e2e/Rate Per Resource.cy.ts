@@ -16,9 +16,12 @@ describe('Rate Per User', function () {
         cy.get('.btn-company-secondary').should('be.disabled');
     });
 
-    //Nombre de la prueba: Project con espacio en blanco en Rate Per User
-    //Codigo: CP-23, CP-51
-    //Falla, porque el boton no esta desabilitado
+    /*
+    Nombre de la prueba: Project con espacio en blanco en Rate Per User
+    Objetivo: Probar la funcionalidad de Rate Per Resource
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que el boton se encuentra desabilitado
+    */
     it('Project con espacio en blanco en Rate Per User', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
@@ -36,6 +39,12 @@ describe('Rate Per User', function () {
     //Nombre de la prueba: User con espacio en blanco en Rate Per User
     //Codigo: CP-24, CP-52
     //Falla, porque el boton no esta desabilitado
+    /*
+    Nombre de la prueba: Project con espacio en blanco en Rate Per User
+    Objetivo: Probar la funcionalidad de Rate Per Resource
+    Datos de prueba: ----
+    Resultado esperado: Que la prueba genere un aviso de que el boton se encuentra desabilitado
+    */
     it('User con espacio en blanco en Rate Per User', function () {
         cy.get('#email').type('qatec2022@gmail.com');
         cy.get('#password').type('qatecjnsc2022');
