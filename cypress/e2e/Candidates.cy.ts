@@ -5,17 +5,18 @@ describe('Learning Paths', function () {
 
 
        /*
-  Nombre: 
-  Objetivo: 
+  Nombre: Verificar la creación de un candidato sin nombre
+  Objetivo: Verificar si es posible crear un candidato sin nombre
   Datos de la Prueba:
-            Nombre:
-            Apellidos:
-            Correo:
-            Número:
-  Resultado esperado: 
+            Nombre: Vacío
+            Apellidos:'Hurtado'
+            Correo: 'Hurtado@gmail.com'
+            Número:'88845665'
+  Resultado esperado: Se espera que la aplicación muestre un mensaje "This field is required",
+  solicitando que se dijite un nombre
   */
 
-  it('Nombre', function () {
+  it('Verificar la creación de un candidato sin nombre', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -38,17 +39,18 @@ describe('Learning Paths', function () {
   });
 
         /*
-  Nombre: 
-  Objetivo: 
+  Nombre: Verificar la creación de un candidato sin apellidos
+  Objetivo: Verificar si es posible crear un candidato sin Apellido
   Datos de la Prueba:
-            Nombre:
-            Apellidos:
-            Correo:
-            Número:
-  Resultado esperado: 
+            Nombre:'Mario'
+            Apellidos: Vacío
+            Correo: 'Hurtado@gmail.com'
+            Número:'88845665'
+  Resultado esperado: Se espera que la aplicación muestre un mensaje "This field is required",
+  solicitando que se dijite un apellido
   */
 
-  it('Apellido', function () {
+  it('Verificar la creación de un candidato sin apellidos', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -74,17 +76,18 @@ describe('Learning Paths', function () {
 
 
         /*
-  Nombre: 
-  Objetivo: 
+  Nombre: Verificar la creación de un candidato sin correo
+  Objetivo: Verificar si es posible crear un candidato sin Correo
   Datos de la Prueba:
-            Nombre:
-            Apellidos:
-            Correo:
-            Número:
-  Resultado esperado: 
+            Nombre:'Mario'
+            Apellidos:'Hurtado'
+            Correo: Vacío
+            Número:'88845665'
+  Resultado esperado: Se espera que la aplicación muestre un mensaje "This field is required",
+  solicitando que se dijite un correo
   */
 
-  it('Correo null', function () {
+  it('Verificar la creación de un candidato sin correo', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -109,17 +112,18 @@ describe('Learning Paths', function () {
 
 
         /*
-  Nombre: 
-  Objetivo: 
+  Nombre: Verificar la creación de un candidato con un correo erroneo
+  Objetivo: Verificar si es posible crear un candidato con un correo erroneo
   Datos de la Prueba:
-            Nombre:
-            Apellidos:
-            Correo:
-            Número:
-  Resultado esperado: 
+            Nombre:'Mario'
+            Apellidos:'Hurtado'
+            Correo: 'Prueba'
+            Número:'88845665'
+  Resultado esperado: Se espera que la aplicación muestre un mensaje "This field should have a valid email address",
+  solicitando que se dijite un correo correcto 
   */
 
-  it('Correo mal', function () {
+  it('Verificar la creación de un candidato con un correo erroneo', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -144,17 +148,18 @@ describe('Learning Paths', function () {
 
 
         /*
-  Nombre: 
-  Objetivo: 
+  Nombre: Verificar la creación de un candidato sin número de telefono
+  Objetivo: Verificar si es posible crear un candidato sin un número telefonico
   Datos de la Prueba:
-            Nombre:
-            Apellidos:
-            Correo:
-            Número:
-  Resultado esperado: 
+            Nombre:'Mario'
+            Apellidos:'Hurtado'
+            Correo: 'Hurtado@gmail.com'
+            Número: Vacío
+  Resultado esperado: Se espera que la aplicación muestre un mensaje "This field is required",
+  solicitando que se dijite un numero de telefono
   */
 
-  it('Numero', function () {
+  it('Verificar la creación de un candidato sin número de telefono', function () {
     cy.get('#email').type('qatec2022@gmail.com');
     cy.get('#password').type('qatecjnsc2022');
     cy.get('.btn > .m-0').click();
@@ -175,10 +180,6 @@ describe('Learning Paths', function () {
         }
     );
   });
-
-
-
-
 
   afterEach(function () {
     cy.reload();
